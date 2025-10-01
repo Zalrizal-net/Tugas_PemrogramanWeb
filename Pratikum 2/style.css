@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Warna */
+  --background-color: #fff;
+  --text-color: #ffffff;
+  --biru-color: #5178eb;
+  --biru2-color: #0e1b94;
+  /* warna gradasi */
+  --gradasi-pertama: linear-gradient(45deg, #0066ff, #7de1ff, #002486);
+  --gradient-secondary: linear-gradient(60deg, #a0a0a0, #ffffff);
+  /* Font */
+  --font-main: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  /* Spacing */
+  --padding-section: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  min-height: 100vh;  
+  background: var(--gradasi-pertama);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientBG 10s ease infinite;
+}
+
+section {
+  padding: var(--padding-section) 0;  
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--biru-color);
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: #fff;
+}
+
+h1{
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-color);
+    text-shadow: 2px 2px 5px #464646;
+}
+
+h2 {
+  font-family: var(--font-main);
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+p {
+  font-family: var(--font-main);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+a {
+  font-family: var(--font-main) ;
+  font-weight: 700;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+a:hover {
+  color: var(--biru2-color);
+  transition: color 0.3s ease;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* About Page – Flex */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.about-container img {
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* Contact Page – Form */
+.contact-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--biru-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.contact-form button:hover {
+  background: var(--biru2-color);
+}
+
+
+/* Bagian container konten */
+.content {
+  width: 50%;             /* biar ada jarak kiri-kanan */
+  max-width: 500px;       /* batas lebar konten */
+  margin: 2rem auto;      /* tengah secara horizontal */
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;    /* sudut membulat */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* efek bayangan */
+}
+
+/* Styling gambar di dalam content */
+.content img {
+  max-width: 35%;   /* gambar tidak lebih lebar dari div */
+  height: auto;      /* jaga proporsi */
+  border-radius: 50%; /* opsional, sudut gambar membulat */
+}
+
+@keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 0.75rem;
+  }
+
+  .content img {
+    max-width: 70%;
+  }
+
+   .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .content img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  a {
+    display: block; /* biar link contact tidak dempet */
+    margin: 0.25rem 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+}
