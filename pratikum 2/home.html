@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portozall.id | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>Portozall.id</h2>
+        <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Project saya</h1>
+        <div class="grid-container">
+            <div class="card">
+                <img src="asset/project_1.png" alt="" srcset="">
+                <h3>Aira Academy</h3>
+                <p>Project web Aira academy menggunakan framework laravel</p>
+            </div> 
+            <!-- card -->
+             <div class="card">
+                <img src="asset/project_2.png" alt="" srcset="">
+                <h3>Chahra Event</h3>
+                <p>Project web PT. Buana cipta Chahra menggunakan framework laravel</p>
+            </div> 
+            <!-- card -->
+             <div class="card">
+                <img src="asset/project_5.png" alt="" srcset="">
+                <h3>Mesin pemberi makan kucing</h3>
+                <p>Project IOT mesin pemberi pakan kucing terjadwal dan bisa dikendalikan dari smarphone</p>
+            </div> 
+            <!-- card -->
+             <div class="card">
+                <img src="asset/project_6.png" alt="" srcset="">
+                <h3>Doorlock</h3>
+                <p>Project IOT sistem kunci pintu cerdas serta dapat dikelola dengan aplikasi doorlock</p>
+            </div> 
+            <!-- card -->
+             <div class="card">
+                <img src="asset/project_4.png" alt="" srcset="">
+                <h3>Lab komputer SMKN 3 BUduran</h3>
+                <p>Rancangan pembangunan labolatorium komputer untuk smkn 3 buduran</p>
+            </div> 
+            <!-- card -->
+             <div class="card">
+                <img src="asset/project_7.png" alt="" srcset="">
+                <h3>jaringan komputer kampus</h3>
+                <p>Rancangan dan konfigurasi jaringan komputer di lingkungan kampus</p>
+            </div> 
+            <!-- card -->
+        </div> 
+        <!-- grid-container -->
+    </section>
+    <!-- section -->
+</body>
+<script>
+    window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+        });
+</script>
+</html>
